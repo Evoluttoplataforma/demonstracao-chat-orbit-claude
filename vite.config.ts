@@ -22,8 +22,8 @@ export default defineConfig(({ mode }) => ({
     target: "esnext",
     cssCodeSplit: true,
     // Don't preload route-specific heavy chunks from the HTML entry.
-    // `charts` (~411KB recharts) and `Admin` bundle only matter in /admin —
-    // preloading them on every landing page destroys LCP for paid traffic.
+    // Admin/DiagnosticoTab/SalasTab are only used in internal routes — preloading
+    // them on every landing page destroys LCP for paid traffic.
     modulePreload: {
       resolveDependencies: (_filename, deps, { hostType }) => {
         if (hostType !== "html") return deps;
@@ -38,7 +38,9 @@ export default defineConfig(({ mode }) => ({
           query: ["@tanstack/react-query"],
           ui: ["@radix-ui/react-dialog", "@radix-ui/react-popover", "@radix-ui/react-tooltip", "@radix-ui/react-tabs"],
           supabase: ["@supabase/supabase-js"],
-          charts: ["recharts"],
+          // NOTE: recharts is intentionally NOT in manualChunks.
+          // Letting Vite auto-split puts it inside the Admin lazy chunk,
+          // so it's never downloaded on landing pages.
         },
       },
     },
