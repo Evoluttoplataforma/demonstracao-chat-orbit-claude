@@ -12,10 +12,11 @@ dist
 dist-ssr
 *.local
 
-# Environment — never commit real secrets; use .env.example for placeholders
-.env
-.env.*
-!.env.example
+# Environment — .env é commitado porque contém APENAS chaves anon/publishable
+# do Supabase (protegidas por RLS, já visíveis no bundle do frontend).
+# .env.local e .env.*.local NUNCA entram no repo (são pra secrets de verdade, se houver)
+.env.local
+.env.*.local
 
 # Claude Code — personal overrides stay local
 .claude/settings.local.json
