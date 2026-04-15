@@ -1,0 +1,1 @@
+ALTER TABLE public.leads ADD COLUMN reschedule_token TEXT UNIQUE DEFAULT NULL;

@@ -1,0 +1,1 @@
+ALTER TABLE public.leads ADD COLUMN ligacao_agendada boolean NOT NULL DEFAULT false;

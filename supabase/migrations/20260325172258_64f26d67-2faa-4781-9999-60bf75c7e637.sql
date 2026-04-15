@@ -1,0 +1,1 @@
+ALTER TABLE public.sala_presencas ADD COLUMN empresa text DEFAULT '';

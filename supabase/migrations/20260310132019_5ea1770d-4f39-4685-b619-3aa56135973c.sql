@@ -1,0 +1,1 @@
+UPDATE presentation_slides SET slide_order = slide_order + 1 WHERE slide_order >= 1 AND is_active = true;

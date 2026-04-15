@@ -1,0 +1,1 @@
+ALTER TABLE public.leads ADD COLUMN lembrete_enviado boolean NOT NULL DEFAULT false;

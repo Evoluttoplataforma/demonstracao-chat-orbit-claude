@@ -1,0 +1,1 @@
+ALTER TABLE public.leads ADD COLUMN IF NOT EXISTS confirmou_participacao boolean NOT NULL DEFAULT false;

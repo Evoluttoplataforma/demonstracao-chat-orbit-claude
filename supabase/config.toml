@@ -1,0 +1,41 @@
+project_id = "nmeuxanxjnhpdcfkdrdc"
+
+[functions]
+  [functions.auth-email-hook]
+    verify_jwt = false
+  [functions.manychat-webhook]
+    verify_jwt = false
+  [functions.pipedrive-webhook]
+    verify_jwt = false
+  [functions.send-calendar-invite]
+    verify_jwt = false
+  [functions.tag-manychat]
+    verify_jwt = false
+  [functions.send-meeting-reminder]
+    verify_jwt = false
+  [functions.generate-diagnostic]
+    verify_jwt = false
+  [functions.submit-diagnostic]
+    verify_jwt = false
+  [functions.summarize-transcription]
+    verify_jwt = false
+  [functions.get-pipedrive-owners]
+    verify_jwt = false
+  [functions.trigger-n8n-call]
+    verify_jwt = false
+  [functions.batch-trigger-calls]
+    verify_jwt = false
+  [functions.confirmation-call]
+    verify_jwt = false
+  [functions.sync-lead-make]
+    verify_jwt = false
+  [functions.batch-confirmation-calls]
+    verify_jwt = false
+  [functions.assign-pipedrive-owner]
+    verify_jwt = false
+  [functions.chat2-ai]
+    verify_jwt = false
+  [functions.chat2-tts]
+    verify_jwt = false
+  [functions.notify-new-lead]
+    verify_jwt = false

@@ -1,0 +1,1 @@
+ALTER TABLE public.leads ADD COLUMN etapa_pipedrive text;

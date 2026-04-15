@@ -1,0 +1,1 @@
+ALTER TABLE public.leads ADD COLUMN software_gestao text DEFAULT NULL;

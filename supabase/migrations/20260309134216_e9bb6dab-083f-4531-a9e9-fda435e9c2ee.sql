@@ -1,0 +1,1 @@
+UPDATE public.presentation_slides SET content = jsonb_set(content, '{buttonLink}', '"https://drive.google.com/file/d/1zzOEOE9QrStiAb2KD11JeBoCHP2A0OCk/view?usp=sharing"') WHERE layout_type = 'image' AND slide_order = 0;

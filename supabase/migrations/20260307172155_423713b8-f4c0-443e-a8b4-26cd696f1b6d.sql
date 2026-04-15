@@ -1,0 +1,1 @@
+ALTER TABLE public.leads ADD COLUMN manychat_subscriber_id text;

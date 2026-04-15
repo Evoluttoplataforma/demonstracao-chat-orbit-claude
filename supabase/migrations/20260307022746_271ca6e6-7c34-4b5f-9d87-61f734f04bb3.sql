@@ -1,0 +1,1 @@
+ALTER TABLE public.leads ADD COLUMN status_reuniao text DEFAULT null;
