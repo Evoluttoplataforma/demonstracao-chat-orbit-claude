@@ -21,6 +21,16 @@ export default defineConfig(({ mode }) => ({
   build: {
     target: "esnext",
     cssCodeSplit: true,
+    // Don't preload route-specific heavy chunks from the HTML entry.
+    // `charts` (~411KB recharts) and `Admin` bundle only matter in /admin —
+    // preloading them on every landing page destroys LCP for paid traffic.
+    modulePreload: {
+      resolveDependencies: (_filename, deps, { hostType }) => {
+        if (hostType !== "html") return deps;
+        const ROUTE_SPECIFIC = ["charts-", "Admin-", "DiagnosticoTab-", "SalasTab-"];
+        return deps.filter((dep) => !ROUTE_SPECIFIC.some((p) => dep.includes(p)));
+      },
+    },
     rollupOptions: {
       output: {
         manualChunks: {
